@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/api/sera/:path*",
+      "destination": "https://api.sera.cx/api/v1/:path*"
+    }
+  ]
+}

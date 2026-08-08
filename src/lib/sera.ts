@@ -22,7 +22,7 @@ export async function fetchFxRate(
   quote: string,
   signal?: AbortSignal,
 ): Promise<FxRate> {
-  const url = new URL(`${SERA_API_BASE}/fx/rate`);
+  const url = new URL(`${SERA_API_BASE}/fx/rate`, window.location.origin);
   url.searchParams.set("base", base);
   url.searchParams.set("quote", quote);
 

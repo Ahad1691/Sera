@@ -5,8 +5,11 @@ export const REFERRAL_URL =
 export const SOURCE_TAG =
   import.meta.env.VITE_SERA_SOURCE_TAG?.trim() || "midboard-kenzy";
 
+// Same-origin by default so the browser avoids Sera API CORS.
+// Vite (dev/preview) and vercel.json rewrite /api/sera → api.sera.cx.
 export const SERA_API_BASE =
-  import.meta.env.VITE_SERA_API_BASE?.trim() || "https://api.sera.cx/api/v1";
+  import.meta.env.VITE_SERA_API_BASE?.trim() || "/api/sera";
+
 
 export const APP_NAME = "Midboard";
 

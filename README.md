@@ -50,7 +50,9 @@ gh repo edit --add-topic built-on-sera
 ## Stack
 
 - Vite + React + TypeScript
-- Sera public API (`https://api.sera.cx/api/v1`)
+- Sera public API via same-origin proxy (`/api/sera` → `https://api.sera.cx/api/v1`) so the browser is not blocked by CORS
+
+Dev/preview proxy is in `vite.config.ts`. Deploy rewrites live in `vercel.json`.
 
 ## Scripts
 
